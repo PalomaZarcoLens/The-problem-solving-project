@@ -1,0 +1,3 @@
+The automated pet feeder must dispense food for cats and dogs at scheduled times, detect whether food has been consumed, and alert staff if dispensing fails or food remains uneaten. 
+It should rely on low-cost components like servo motors and sensors, operate on a fixed schedule, and provide basic feedback through alerts or status indicators. 
+Inputs include feeding times and sensor data, while outputs include motor control and alerts. 
