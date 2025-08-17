@@ -1,0 +1,8 @@
+The machine is on.
+Check if it's time to feed the pets and check the food level sensor to make sure that the food is dispensed at the correct time.
+If it’s not, wait till the time is correct. 
+If it is, fill the bowl.
+If the bowl is empty, send an alert to the staff that says: “No food”.
+If the bowl weight is above the threshold of food that the pet must eat, activate the servo motor, and after 30 minutes, if there's no change, send an alert to the staff that says: “Not Eaten”.
+If the bowl weight is below the threshold of the food that the pet must eat, update the status to display: “Feeding Complete”.
+Return to idle mode and wait for the next feeding time.
