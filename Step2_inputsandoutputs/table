@@ -1,9 +1,0 @@
-Type	          Component                              	Description	                           Sample values            	                Operational Constraints                            	Type of variable
-Inputs	Feeding schedule (RTC)	 Times of day when food should be dispensed	                07:00, 12:00, 18:00	                Must trigger at exact scheduled times	                            String
-	      Food level sensor      	Detects if food is present in the container	               "Full", "Low", "Empty"	              Must detect if food is available before dispensing               	String
-      	Consumption sensor   Detects if food has been eaten (i.e. weight sensor or IR sensor)    	0g, 50g, 100g	                Measures food dispensed and consumed; accuracy +-5g	              Integer
-      	Manual override button	    Allows staff to manually dispense food	                  Pressed / Not pressed	            Allows manual feeding; overrides schedule                        	Boolean
-Outputs	Servo motor activation	    Controls food dispensing mechanism                    	Rotate 90°, Rotate 180°            	Dispenses fixed amount of food; must reset to default position	   Integer
-      	Alert system	      LED indicator or buzzer to notify staff of issues	          "No Food", "Not Eaten", "Sensor Error"	  Alerts staff of issues; must be noticeable and resettable	       String
-	      Status display	    Optional LCD or serial output showing system status	       "Feeding Complete", "Waiting", "Error"   Provides real-time feedback; optional for low-cost builds	         String
-      
