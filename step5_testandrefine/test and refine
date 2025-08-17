@@ -1,1 +1,35 @@
+Sample tests scenarios:
+-	Pet eats as expected: PASS
+  o	Inputs: time, food level, bowl weight
+  o	Outputs: dispense food, status displays: “feeding complete”
+-	Pet does not eat: PASS
+  o	Inputs: time, food level, bowl weight
+  o	Outputs: alert: “food not eaten”
+-	Food bin is empty: PASS
+  o	Inputs: time, food level
+  o	Outputs: alert: “no food available”
+-	Manual override is pressed: PASS
+  o	Inputs: button pressed, time
+  o	Outputs: dispense food immediately
+-	Sensor error: PASS
+  o	Inputs: weight sensor
+  o	Outputs: alert: “sensor error”
+
+Discussion of logic:
+-	Successes: the system correctly handles scheduled feeding, manual override, and basic alert conditions.
+-	Weaknesses: no backup if sensors fail, alerts are passive (i.e., only messages)
+-	Rare cases: what if the pets eat very slowly? What if food is spilled but not eaten?
+
+Possible refinements:
+-	Visual indicators: 
+  o	Use LED colour codes (green is OK and red is alert) for quick staff contact.
+-	Data logging: 
+  o	Store feeding history and sensor data for analysis and improvement.
+-	Add sensor error handling:
+  o	Detect null or invalid readings and trigger a sensor error alert.
+  o	Log errors for staff review (i.e., staff response time).
+-	Retry mechanisms:
+  o	If food isn’t eaten within 30 minutes, send a second alert or attempt re-dispensing.
+-	Pet-specific profiles:
+  o	Customize feeding times and portions per animal.
 
